@@ -9,12 +9,17 @@
         <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     </head>
     <body ng-app="app">
-        <div ng-view></div>
+        <div class="container">
+            <div ng-include="'shared/header.html'"></div>
+            <div ng-view></div>
+        </div>
 
         <script src="bower_components/angular/angular.js"></script>
         <script src="bower_components/angular-route/angular-route.js"></script>
 
         <script src="app.js"></script>
         <script src="routes.js"></script>
+
+        <script src="github/github.directive.js"></script>
     </body>
 </html>

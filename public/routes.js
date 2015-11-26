@@ -12,6 +12,9 @@
             .when('/', {
                 templateUrl: 'home/index.html',
             })
+            .when('/about', {
+                templateUrl: 'home/about.html',
+            })
             .otherwise({
                 redirectTo: '/'
             });
