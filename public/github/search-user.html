@@ -1,0 +1,19 @@
+<div class="jumbotron">
+    <h1>GitHub User's Info</h1>
+    <p class="lead">A simple application with AngularJS, build to display GitHub user's info</p>
+    <div class="row">
+        <div class="col-md-4">
+            <form>
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input ng-model="username"
+                           ng-model-options="{ debounce: {'default': 500, 'blur': 0} }"
+                           type="text"
+                           class="form-control"
+                           id="username"
+                           placeholder="Ex: matheusml">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
