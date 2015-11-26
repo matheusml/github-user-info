@@ -29,7 +29,7 @@
             function getUserInfo(username) {
                 UsersService.getByUsername(username).then(function(response) {
                     getUserRepos(username);
-                    githubCtrl.updateUser(response.data);
+                    githubCtrl.setUser(response.data);
                 }).catch(function() {
                     githubCtrl.clearUser();
                 });
@@ -37,7 +37,7 @@
 
             function getUserRepos(username) {
                 UsersService.getReposByUsername(username).then(function(response) {
-                    githubCtrl.updateUserRepos(response.data);
+                    githubCtrl.setRepos(response.data);
                 }).catch(function() {
                     githubCtrl.clearUserRepos();
                 });

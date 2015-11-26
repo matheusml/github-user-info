@@ -9,12 +9,12 @@
         return {
             restrict: 'E',
             templateUrl: 'github/github.html',
-            scope: true,
+            scope: {},
             controller: controller
         };
 
         function controller($scope) {
-            this.updateUser = function(data) {
+            this.setUser = function(data) {
                 $scope.user = data;
             }
 
@@ -22,7 +22,7 @@
                 $scope.user = null;
             };
 
-            this.updateUserRepos = function(data) {
+            this.setRepos = function(data) {
                 $scope.repos = data;
             };
 

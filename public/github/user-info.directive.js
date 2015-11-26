@@ -10,7 +10,8 @@
             restrict: 'E',
             templateUrl: 'github/user-info.html',
             scope: {
-                user: '='
+                user: '=',
+                repos: '='
             }
         };
     }

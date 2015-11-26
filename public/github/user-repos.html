@@ -1,8 +1,17 @@
 <div ng-if="repos">
     <div ng-repeat="repo in repos" class="panel panel-default">
-        <div class="panel-heading">Panel heading without title</div>
+        <div class="panel-heading">
+            {{repo.name}}
+            <span class="badge">{{repo.stargazers_count}}</span>
+        </div>
         <div class="panel-body">
-            Panel content
+            <p>{{repo.description}}</p>
+            <!--
+            <p>Issues: {{repo.open_issues}}</p>
+            <p>Forks: {{repo.forks}}</p>
+            <p>Watchers: {{repo.watchers}}</p>
+            -->
+            <a ng-href="{{repo.html_url}}">{{repo.html_url}}</a>
         </div>
     </div>
 </div>
