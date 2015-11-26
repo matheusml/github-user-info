@@ -1,4 +1,4 @@
-# League of Legends Stats
+# GitHub User's Info
 
 Source code of the GitHub User's Info application
 
