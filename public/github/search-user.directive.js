@@ -5,9 +5,9 @@
         .module('app')
         .directive('searchUser', SearchUser);
 
-    SearchUser.$inject = ['UsersService'];
+    SearchUser.$inject = ['UsersService', 'toaster'];
 
-    function SearchUser(UsersService) {
+    function SearchUser(UsersService, toaster) {
         return {
             restrict: 'E',
             templateUrl: 'github/search-user.html',
@@ -31,6 +31,7 @@
                     getUserRepos(username);
                     githubCtrl.setUser(response.data);
                 }).catch(function() {
+                    toaster.pop('error', 'Server Error', 'Unable to fetch user\'s data');
                     githubCtrl.clearUser();
                 });
             }
@@ -39,6 +40,7 @@
                 UsersService.getReposByUsername(username).then(function(response) {
                     githubCtrl.setRepos(response.data);
                 }).catch(function() {
+                    toaster.pop('error', 'Server Error', 'Unable to fetch user\'s repos');
                     githubCtrl.clearUserRepos();
                 });
             }
