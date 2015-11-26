@@ -9,8 +9,27 @@
         return {
             restrict: 'E',
             templateUrl: 'github/github.html',
-            scope: {}
+            scope: true,
+            controller: controller
         };
+
+        function controller($scope) {
+            this.updateUser = function(data) {
+                $scope.user = data;
+            }
+
+            this.clearUser = function() {
+                $scope.user = null;
+            };
+
+            this.updateUserRepos = function(data) {
+                $scope.repos = data;
+            };
+
+            this.clearUserRepos = function() {
+                $scope.repos = null;
+            };
+        }
     }
 
 })();

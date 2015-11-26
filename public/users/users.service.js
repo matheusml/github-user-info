@@ -11,6 +11,10 @@
         this.getByUsername = function(username) {
             return $http.get(API.baseUrl + 'users/' + username);
         };
+
+        this.getReposByUsername = function(username) {
+            return $http.get(API.baseUrl + 'users/' + username + '/repos');
+        };
     }
 
 })();
