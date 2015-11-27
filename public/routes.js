@@ -10,10 +10,10 @@
     function Config($routeProvider) {
         $routeProvider
             .when('/', {
-                templateUrl: 'home/index.html',
+                templateUrl: 'components/home/index.html',
             })
             .when('/about', {
-                templateUrl: 'home/about.html',
+                templateUrl: 'components/home/about.html',
             })
             .otherwise({
                 redirectTo: '/'

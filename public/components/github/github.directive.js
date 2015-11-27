@@ -8,7 +8,7 @@
     function Github() {
         return {
             restrict: 'E',
-            templateUrl: 'github/github.html',
+            templateUrl: 'components/github/github.html',
             scope: {},
             controller: controller
         };

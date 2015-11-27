@@ -10,7 +10,7 @@
     function SearchUser(UsersService, toaster) {
         return {
             restrict: 'E',
-            templateUrl: 'github/search-user.html',
+            templateUrl: 'components/github/search-user.html',
             require: '^github',
             scope: {},
             link: linker

@@ -8,7 +8,7 @@
     function UserRepos() {
         return {
             restrict: 'E',
-            templateUrl: 'github/user-repos.html',
+            templateUrl: 'components/github/user-repos.html',
             scope: {
                 repos: '='
             }

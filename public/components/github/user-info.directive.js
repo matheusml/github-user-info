@@ -10,7 +10,7 @@
     function UserInfo(SmoothScroll) {
         return {
             restrict: 'E',
-            templateUrl: 'github/user-info.html',
+            templateUrl: 'components/github/user-info.html',
             scope: {
                 user: '=',
                 repos: '='
