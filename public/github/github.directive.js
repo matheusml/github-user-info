@@ -5,9 +5,7 @@
         .module('app')
         .directive('github', Github);
 
-    Github.$inject = ['SmoothScroll'];
-
-    function Github(SmoothScroll) {
+    function Github() {
         return {
             restrict: 'E',
             templateUrl: 'github/github.html',
@@ -26,7 +24,6 @@
 
             this.setRepos = function(data) {
                 $scope.repos = data;
-                SmoothScroll.animate('#user-info');
             };
 
             this.clearUserRepos = function() {
