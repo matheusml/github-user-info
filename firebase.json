@@ -1,0 +1,9 @@
+{
+  "firebase": "github-user-info",
+  "public": "public",
+  "ignore": [
+    "firebase.json",
+    "**/.*",
+    "**/node_modules/**"
+  ]
+}
