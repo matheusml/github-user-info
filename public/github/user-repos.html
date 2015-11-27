@@ -1,17 +1,17 @@
 <div ng-if="repos">
-    <div ng-repeat="repo in repos" class="panel panel-default">
-        <div class="panel-heading">
-            {{repo.name}}
-            <span class="badge">{{repo.stargazers_count}}</span>
-        </div>
-        <div class="panel-body">
-            <p>{{repo.description}}</p>
-            <!--
-            <p>Issues: {{repo.open_issues}}</p>
-            <p>Forks: {{repo.forks}}</p>
-            <p>Watchers: {{repo.watchers}}</p>
-            -->
-            <a ng-href="{{repo.html_url}}">{{repo.html_url}}</a>
+    <h2>Repositories</h2>
+    <div ng-repeat="repo in repos">
+        <div class="thumbnail">
+            <div class="caption">
+                <h3>{{repo.name}}
+                    <span class="badge">{{repo.stargazers_count}} STARS</span>
+                </h3>
+                <p>{{repo.description}}</p>
+                <p>
+                    <a ng-href="{{repo.html_url}}" class="btn btn-primary" role="button">GitHub</a>
+                    <a ng-href="{{repo.html_url + '/issues'}}" class="btn btn-default" role="button">Issues ({{repo.open_issues}})</a>
+                </p>
+            </div>
         </div>
     </div>
 </div>
