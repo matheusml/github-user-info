@@ -26,7 +26,7 @@
                 $scope.repos = data;
             };
 
-            this.clearUserRepos = function() {
+            this.clearRepos = function() {
                 $scope.repos = null;
             };
         }

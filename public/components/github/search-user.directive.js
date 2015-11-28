@@ -41,7 +41,7 @@
                     githubCtrl.setRepos(response.data);
                 }).catch(function() {
                     toaster.pop('error', 'Server Error', 'Unable to fetch user\'s repos');
-                    githubCtrl.clearUserRepos();
+                    githubCtrl.clearRepos();
                 });
             }
         }

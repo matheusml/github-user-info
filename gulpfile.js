@@ -7,9 +7,7 @@ var ngAnnotate = require('gulp-ng-annotate');
 gulp.task('default', ['bower', 'js', 'css']);
 
 gulp.task('js', function() {
-    return gulp.src(['public/app.js',
-                     'public/routes.js',
-                     'public/components/**/*.js'])
+    return gulp.src(['public/components/**/*.js'])
         .pipe(concat('bundle.min.js'))
         .pipe(ngAnnotate())
         .pipe(uglify())
